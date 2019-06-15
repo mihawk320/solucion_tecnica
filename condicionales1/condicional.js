@@ -12,7 +12,7 @@ else{
 
 console.log(total)
 
-/*var metros=2;
+var metros=2;
 var kilometros=0;
 var decimetros=0;
 
@@ -25,4 +25,3 @@ else{
         decimetros=metros * 10;
         console.log("decimetros: " + decimetros)
 }
-*/
