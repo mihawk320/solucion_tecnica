@@ -1,3 +1,5 @@
+
+
 //EJERCICIO NUMERO 1
 document.write("ejercicio Número 1" + "<br>");
 
@@ -149,3 +151,37 @@ function programa(){
 
 
 console.log(programa(m));
+
+
+
+var n=21;
+var i=4;
+var sp=10;
+var cp=3;
+var ci=6;
+
+i=1;
+sp=0;
+cp=0;
+ci=0;
+
+do{
+    n=21;
+    if(n%2==0){
+        sp=sp+n
+        cp=cp+1
+    }
+    else{
+        ci=ci+1;
+    }
+
+    i=i+1;
+}
+while(i<=5)
+
+document.write(ci/ci+cp)
+
+if(cp!==0){
+    document.write(sp/cp)
+}
+
