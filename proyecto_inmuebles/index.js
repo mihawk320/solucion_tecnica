@@ -7,13 +7,12 @@ var valorGym=0;
 var genero="";
 var edad=0;
 var total=0;
+var totalPersonas=0;
 //capturar datos de entrada
 mtCuadrados=prompt("Digite los metros cuadrados ");
 tipoInmueble=prompt("Digite el tipo de inmueble 'casa' o 'apartamento' ");
-genero=prompt("Digite su genero 'masculino' o 'femenino' ");
-edad=prompt("Digite su edad");
 tipoInmueble=tipoInmueble.toLowerCase();
-genero=genero.toLowerCase();
+
 //proceso o calculos
 
 
@@ -37,7 +36,16 @@ function aseo(valorAdm,mtCuadrados){
     return (valorAdm*0.1)+(mtCuadrados*1000);
 }
 
-valorGym=gym(genero,edad);
+totalPersonas=prompt("digite el numero de personas en la propiedad");
+
+for(i=0;i<totalPersonas;i++){
+    edad=prompt("Digite su edad"+(i+1));
+    genero=prompt("Digite su genero 'masculino' o 'femenino' "+(i+1));
+    genero=genero.toLowerCase();
+    valorGym+=gym(genero,edad);
+}
+
+
 function gym(genero,edad){
     switch(genero){
         case "masculino":
@@ -89,5 +97,6 @@ total=valorAdm+valorAseo+valorGym;
 //salidas del sistema
 document.write("el valor de la administración es:" + valorAdm + "<br>") ;
 document.write("el valor del aseo: " + valorAseo + "<br>");
+document.write("la cantidad de personas en la propiedad es:  " + totalPersonas + "<br>");
 document.write("el valor del gym es: " + valorGym + "<br>")
 document.write("El costo total es: " + total);
